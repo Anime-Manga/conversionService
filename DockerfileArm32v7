@@ -1,0 +1,28 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/runtime:5.0-buster-slim-arm32v7 AS base
+
+RUN apt update
+RUN apt install -y ffmpeg
+
+WORKDIR /app
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim-arm32v7 AS build
+WORKDIR /src
+COPY ["src/Cesxhin.AnimeManga/Cesxhin.AnimeManga.ConversionService/", "./Cesxhin.AnimeManga.ConversionService/"]
+COPY ["src/references/Cesxhin.AnimeManga/Cesxhin.AnimeManga.Application/", "./references/Cesxhin.AnimeManga.Application/"]
+COPY ["src/references/Cesxhin.AnimeManga/Cesxhin.AnimeManga.Domain/", "./references/Cesxhin.AnimeManga.Domain/"]
+
+RUN dotnet restore "./Cesxhin.AnimeManga.ConversionService/Cesxhin.AnimeManga.ConversionService.csproj"
+COPY . .
+WORKDIR "./Cesxhin.AnimeManga.ConversionService"
+
+RUN dotnet build "Cesxhin.AnimeManga.ConversionService.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Cesxhin.AnimeManga.ConversionService.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Cesxhin.AnimeManga.ConversionService.dll"]
