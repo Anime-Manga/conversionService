@@ -9,9 +9,9 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/Cesxhin.AnimeManga/Cesxhin.AnimeManga.ConversionService/", "./Cesxhin.AnimeManga.ConversionService/"]
-COPY ["src/references/Cesxhin.AnimeManga/Cesxhin.AnimeManga.Application/", "./references/Cesxhin.AnimeManga.Application/"]
-COPY ["src/references/Cesxhin.AnimeManga/Cesxhin.AnimeManga.Domain/", "./references/Cesxhin.AnimeManga.Domain/"]
+COPY ["src/Cesxhin.AnimeManga.ConversionService/", "./Cesxhin.AnimeManga.ConversionService/"]
+COPY ["src/references/Cesxhin.AnimeManga.Application/", "./references/Cesxhin.AnimeManga.Application/"]
+COPY ["src/references/Cesxhin.AnimeManga.Domain/", "./references/Cesxhin.AnimeManga.Domain/"]
 
 RUN dotnet restore "./Cesxhin.AnimeManga.ConversionService/Cesxhin.AnimeManga.ConversionService.csproj"
 COPY . .
@@ -25,5 +25,4 @@ RUN dotnet publish "Cesxhin.AnimeManga.ConversionService.csproj" -c Release -o /
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-
 ENTRYPOINT ["dotnet", "Cesxhin.AnimeManga.ConversionService.dll"]
