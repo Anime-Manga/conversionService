@@ -27,4 +27,4 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USER }}/animemanga-conversionservice:1.0.0_DEV
+        tags: ${{ secrets.DOCKER_USER }}/animemanga-conversionservice:1.0.0_DEV, ${{ secrets.DOCKER_USER }}/animemanga-conversionservice:latest_DEV
