@@ -21,6 +21,7 @@ example:
     WEBHOOK_DISCORD_DEBUG: "url" [not require]
     
     #--- General ---
+    MAX_THREAD: "3" #3 default
     PATH_TEMP: "/folder/temp" [require]
     PATH_FFMPEG: "/folder/bin" #/usr/local/bin/ffmpeg [default]
     BASE_PATH: "/folder/anime" or "D:\\\\Directory\Anime" #/ [default]
