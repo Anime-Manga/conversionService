@@ -1,7 +1,14 @@
 ## 💱Conversion Service
 Questo progetto verrà utilizzato per convertire file ts in mp4 da poter riprodurre in streaming
 ### Information general:
-- `require` volume mounted on Docker
+> Note: `require` volume mounted on Docker
+
+### Dependencies
+| Services | Required |
+| ------ | ------ |
+| Api | ✅  |
+| RabbitMQ | ✅  |
+
 ### Variabili globali richiesti:
 ```sh
 example:
