@@ -1,7 +1,14 @@
 ## 💱Conversion Service
 Questo progetto verrà utilizzato per convertire file ts in mp4 da poter riprodurre in streaming
 ### Information general:
-- `require` volume mounted on Docker
+> Note: `require` volume mounted on Docker
+
+### Dependencies
+| Services | Required |
+| ------ | ------ |
+| Api | ✅  |
+| RabbitMQ | ✅  |
+
 ### Variabili globali richiesti:
 ```sh
 example:
@@ -21,6 +28,7 @@ example:
     WEBHOOK_DISCORD_DEBUG: "url" [not require]
     
     #--- General ---
+    MAX_THREAD: "3" #3 default
     PATH_TEMP: "/folder/temp" [require]
     PATH_FFMPEG: "/folder/bin" #/usr/local/bin/ffmpeg [default]
     BASE_PATH: "/folder/anime" or "D:\\\\Directory\Anime" #/ [default]
