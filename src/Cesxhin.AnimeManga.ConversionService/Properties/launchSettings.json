@@ -1,0 +1,15 @@
+﻿{
+  "profiles": {
+    "conversion": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ADDRESS_RABBIT": "145.110.1.234",
+        "LIMIT_CONSUMER_RABBIT": "1",
+        "PORT_API": "5000",
+        "LOG_LEVEL": "Debug",
+        "BASE_PATH": "D:\\TestAnime",
+        "PATH_FFMPEG": "C:\\Users\\matti.CESXHIN\\Desktop\\ffmpeg-2022-07-21-git-f7d510b33f-essentials_build\\bin"
+      }
+    }
+  }
+}
