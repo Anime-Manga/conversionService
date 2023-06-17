@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cesxhin.AnimeManga.ConversionService", "Cesxhin.AnimeManga.ConversionService.csproj", "{FB63F4EE-6FD4-467A-AB4E-7F6B08EB0C1D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cesxhin.AnimeManga.Domain", "..\..\..\references\src\Cesxhin.AnimeManga.Domain\Cesxhin.AnimeManga.Domain.csproj", "{249020ED-19D9-4941-AB0A-1B52CDC7F1E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cesxhin.AnimeManga.Modules", "..\..\..\references\src\Cesxhin.AnimeManga.Modules\Cesxhin.AnimeManga.Modules.csproj", "{165F1033-889B-4F65-85F6-18F7787A5B84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cesxhin.AnimeManga.Application", "..\Cesxhin.AnimeManga.Application\Cesxhin.AnimeManga.Application.csproj", "{ADDF5B99-FA37-4371-82AB-96A4D031A0B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB63F4EE-6FD4-467A-AB4E-7F6B08EB0C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB63F4EE-6FD4-467A-AB4E-7F6B08EB0C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB63F4EE-6FD4-467A-AB4E-7F6B08EB0C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB63F4EE-6FD4-467A-AB4E-7F6B08EB0C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249020ED-19D9-4941-AB0A-1B52CDC7F1E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249020ED-19D9-4941-AB0A-1B52CDC7F1E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249020ED-19D9-4941-AB0A-1B52CDC7F1E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249020ED-19D9-4941-AB0A-1B52CDC7F1E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165F1033-889B-4F65-85F6-18F7787A5B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165F1033-889B-4F65-85F6-18F7787A5B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165F1033-889B-4F65-85F6-18F7787A5B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165F1033-889B-4F65-85F6-18F7787A5B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDF5B99-FA37-4371-82AB-96A4D031A0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDF5B99-FA37-4371-82AB-96A4D031A0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDF5B99-FA37-4371-82AB-96A4D031A0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDF5B99-FA37-4371-82AB-96A4D031A0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {959EBC45-CB1F-482E-B022-C80C944A9FB9}
+	EndGlobalSection
+EndGlobal
