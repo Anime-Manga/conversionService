@@ -118,7 +118,7 @@ namespace Cesxhin.AnimeManga.Application.Consumers
                             .WithVideoCodec(VideoCodec.LibX264)
                             .WithAudioCodec(AudioCodec.Aac)
                             .WithVideoFilters(filterOptions => filterOptions
-                                .Scale(VideoSize.FullHd))
+                                .Scale(VideoSize.Original))
                             .WithFastStart())
                         .NotifyOnError((outLine) =>
                         {
