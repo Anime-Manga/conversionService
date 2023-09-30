@@ -117,8 +117,6 @@ namespace Cesxhin.AnimeManga.Application.Consumers
                             .UsingThreads(int.Parse(MAX_THREAD))
                             .WithVideoCodec(VideoCodec.LibX264)
                             .WithAudioCodec(AudioCodec.Aac)
-                            .WithVideoFilters(filterOptions => filterOptions
-                                .Scale(VideoSize.Original))
                             .WithFastStart())
                         .NotifyOnError((outLine) =>
                         {
