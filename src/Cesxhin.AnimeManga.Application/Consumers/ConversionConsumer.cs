@@ -149,6 +149,11 @@ namespace Cesxhin.AnimeManga.Application.Consumers
                 if (episode.StateDownload == "failed")
                     return Task.CompletedTask;
 
+                string pathPublic = Path.GetDirectoryName(message.FilePath);
+                
+                if(!Directory.Exists(pathPublic))
+                    Directory.CreateDirectory(pathPublic);
+
                 File.Move(tempMp4, message.FilePath, true);
 
                 //delete old file
