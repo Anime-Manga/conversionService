@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Released]
+## [2.0.2] - 16-10-2023
+### Fixed
+- Problem folder not exist
+
+### Removed
+- Scale video
+- Check healt
+
 ## [2.0.1] - 17-06-2023
 ### Fixed
 - Class of models
