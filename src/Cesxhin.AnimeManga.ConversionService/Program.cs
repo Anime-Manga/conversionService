@@ -1,12 +1,10 @@
 using Cesxhin.AnimeManga.Application.Consumers;
-using Cesxhin.AnimeManga.Modules.CronJob;
 using Cesxhin.AnimeManga.Modules.Generic;
 using FFMpegCore;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NLog;
-using Quartz;
 using System;
 
 namespace Cesxhin.AnimeManga.ConversionService
@@ -53,16 +51,6 @@ namespace Cesxhin.AnimeManga.ConversionService
                     var level = Environment.GetEnvironmentVariable("LOG_LEVEL").ToLower() ?? "info";
                     LogLevel logLevel = NLogManager.GetLevel(level);
                     NLogManager.Configure(logLevel);
-
-                    //cronjob for check health
-                    services.AddQuartz(q =>
-                    {
-                        q.UseMicrosoftDependencyInjectionJobFactory();
-                        q.ScheduleJob<HealthJob>(trigger => trigger
-                            .StartNow()
-                            .WithDailyTimeIntervalSchedule(x => x.WithIntervalInSeconds(60)), job => job.WithIdentity("conversion"));
-                    });
-                    services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 
                     //set ffmpeg
                     GlobalFFOptions.Configure(options => options.BinaryFolder = Environment.GetEnvironmentVariable("PATH_FFMPEG").ToLower() ?? "./bin");
